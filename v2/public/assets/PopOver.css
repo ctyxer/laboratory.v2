@@ -1,0 +1,49 @@
+@charset "UTF-8";
+.slider {
+  width: 300px;
+  height: 200px;
+  position: fixed;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+
+/*
+   .slider{//Использование функции с арументами по умолчанию 500,400,29
+    @include slider(500,400,29);
+   }
+*/
+.sliderContent {
+  width: 290px;
+  height: 190px;
+  position: relative;
+}
+
+.sliderContent .item {
+  background: #ffffff;
+}
+
+.b-popup {
+  float: left;
+  margin-left: 100px;
+}
+
+.b-popup .b-popup-content {
+  margin: 60px auto 0px auto;
+  width: 300px;
+  height: 200px;
+  -webkit-box-shadow: 0px 0px 10px #000;
+          box-shadow: 0px 0px 10px #000;
+  background: #ffffff;
+  position: relative;
+}
+
+.b-popup {
+  width: 100%;
+  min-height: 100%;
+  background-color: rgba(133, 133, 133, 0.5);
+  overflow: hidden;
+  position: fixed;
+  top: 0px;
+}
+/*# sourceMappingURL=PopOver.css.map */

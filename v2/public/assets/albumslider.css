@@ -1,0 +1,159 @@
+@charset "UTF-8";
+/* ------ Стили для mobilyslider
+-----------------------------------------------*/
+.slider {
+  width: 900px;
+  height: 560px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 4%;
+}
+
+.sliderContent {
+  width: 900px;
+  height: 560px;
+  clear: both;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4%;
+}
+
+.sliderContent .item {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  width: 900px;
+  height: 560px;
+  background-color: #ffe9ed;
+  border-radius: 4%;
+}
+
+.img_slide {
+  margin-left: 270px;
+  width: 370px;
+  height: 370px;
+  margin-top: 50px;
+}
+
+.sliderArrows a {
+  display: block;
+  text-indent: -9999px;
+  outline: none;
+  z-index: 50;
+  background-image: url(../img/prev_back.png);
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  top: 50%;
+  margin-top: -34px;
+}
+
+.prev {
+  background-position: 0 0;
+  left: 15px;
+}
+
+.prev:hover {
+  background-position: 0 -44px;
+}
+
+.next {
+  right: 15px;
+  background-position: -44px 0;
+}
+
+.next:hover {
+  background-position: -44px -44px;
+}
+
+.b-popup {
+  width: 100%;
+  min-height: 100%;
+  background-color: rgba(149, 138, 138, 0.5);
+  overflow: hidden;
+  position: fixed;
+  top: 0px;
+}
+
+.b-popup .b-popup-content {
+  margin-left: 500px;
+  margin: 60px auto 0px auto;
+  width: 900px;
+  height: 560px;
+  -webkit-box-shadow: 0px 0px 10px #957070;
+          box-shadow: 0px 0px 10px #957070;
+  position: relative;
+  border: 2px solid #81535c;
+  border-radius: 4%;
+}
+
+.cl-btn-7 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: -50px;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.cl-btn-7:before {
+  content: '+';
+  color: #f5e1e8;
+  position: absolute;
+  z-index: 2;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  font-size: 60px;
+  line-height: 1;
+  top: -5px;
+  left: 6px;
+  -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.2, 0.85);
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.2, 0.85);
+}
+
+.cl-btn-7:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background: #dc4675;
+  z-index: 1;
+  -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.2, 0.85);
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.2, 0.85);
+  -webkit-transform: scale(0.01);
+          transform: scale(0.01);
+}
+
+.cl-btn-7:hover:after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.cl-btn-7:hover:before {
+  -webkit-transform: scale(0.8) rotate(45deg);
+          transform: scale(0.8) rotate(45deg);
+  color: #f5e1e8;
+}
+
+.Title_img {
+  clear: both;
+  text-align: center;
+  font-size: 15px;
+  line-height: 16px;
+  top: 0;
+}
+
+.Content_img {
+  clear: both;
+  text-align: center;
+  font-size: 15px;
+  line-height: 16px;
+  top: 0;
+}
+/*# sourceMappingURL=AlbumSlider.css.map */
