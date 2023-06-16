@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class hobbyController extends Controller
+class HobbyController extends Controller
 {
     public function hobby()
     {

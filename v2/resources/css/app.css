@@ -1,0 +1,475 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+  .btn-default {
+      @apply duration-300 border bg-rose-200 inline-block p-3 m-3 rounded-lg hover:bg-rose-300 hover:shadow text-xl;
+  }
+}
+
+/* ------ Стили для mobilyslider
+-----------------------------------------------*/
+.slider {
+    width: 900px;
+    height: 560px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 4%;
+}
+
+.sliderContent {
+    width: 900px;
+    height: 560px;
+    clear: both;
+    position: relative;
+    overflow: hidden;
+    border-radius: 4%;
+}
+
+.sliderContent .item {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+    height: 560px;
+    background-color: #ffe9ed;
+    border-radius: 4%;
+}
+
+.img_slide {
+    margin-left: 270px;
+    width: 370px;
+    height: 370px;
+    margin-top: 50px;
+}
+
+.sliderArrows a {
+    display: block;
+    text-indent: -9999px;
+    outline: none;
+    z-index: 50;
+    background-image: url(../img/prev_back.png);
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    top: 50%;
+    margin-top: -34px;
+}
+
+.prev {
+    background-position: 0 0;
+    left: 15px;
+}
+
+.prev:hover {
+    background-position: 0 -44px;
+}
+
+.next {
+    right: 15px;
+    background-position: -44px 0;
+}
+
+.next:hover {
+    background-position: -44px -44px;
+}
+
+.b-popup {
+    width: 100%;
+    min-height: 100%;
+    background-color: rgba(149, 138, 138, 0.5);
+    overflow: hidden;
+    position: fixed;
+    top: 0px;
+}
+
+.b-popup .b-popup-content {
+    margin-left: 500px;
+    margin: 60px auto 0px auto;
+    width: 900px;
+    height: 560px;
+    -webkit-box-shadow: 0px 0px 10px #957070;
+    box-shadow: 0px 0px 10px #957070;
+    position: relative;
+    border: 2px solid #81535c;
+    border-radius: 4%;
+}
+
+.cl-btn-7 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: -50px;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.cl-btn-7:before {
+    content: '+';
+    color: #f5e1e8;
+    position: absolute;
+    z-index: 2;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    font-size: 60px;
+    line-height: 1;
+    top: -5px;
+    left: 6px;
+    -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.2, 0.85);
+    transition: all 0.3s cubic-bezier(0.77, 0, 0.2, 0.85);
+}
+
+.cl-btn-7:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background: #dc4675;
+    z-index: 1;
+    -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.2, 0.85);
+    transition: all 0.3s cubic-bezier(0.77, 0, 0.2, 0.85);
+    -webkit-transform: scale(0.01);
+    transform: scale(0.01);
+}
+
+.cl-btn-7:hover:after {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.cl-btn-7:hover:before {
+    -webkit-transform: scale(0.8) rotate(45deg);
+    transform: scale(0.8) rotate(45deg);
+    color: #f5e1e8;
+}
+
+.Title_img {
+    clear: both;
+    text-align: center;
+    font-size: 15px;
+    line-height: 16px;
+    top: 0;
+}
+
+.Content_img {
+    clear: both;
+    text-align: center;
+    font-size: 15px;
+    line-height: 16px;
+    top: 0;
+}
+
+.slider {
+    width: 300px;
+    height: 200px;
+    position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+
+/*
+   .slider{//Использование функции с арументами по умолчанию 500,400,29
+    @include slider(500,400,29);
+   }
+*/
+.sliderContent {
+    width: 290px;
+    height: 190px;
+    position: relative;
+}
+
+.sliderContent .item {
+    background: #ffffff;
+}
+
+.b-popup {
+    float: left;
+    margin-left: 100px;
+}
+
+.b-popup .b-popup-content {
+    margin: 60px auto 0px auto;
+    width: 300px;
+    height: 200px;
+    -webkit-box-shadow: 0px 0px 10px #000;
+    box-shadow: 0px 0px 10px #000;
+    background: #ffffff;
+    position: relative;
+}
+
+.b-popup {
+    width: 100%;
+    min-height: 100%;
+    background-color: rgba(133, 133, 133, 0.5);
+    overflow: hidden;
+    position: fixed;
+    top: 0px;
+}
+
+/*# sourceMappingURL=PopOver.css.map */
+
+html {
+	height: 100%;
+}
+body {
+	font-family: Bradley Hand, cursive;
+	font-size: 13pt;
+	background: #ffe9ed;
+	color: #cd2359;
+	margin: 0; 
+	height: 100%; 
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100%;
+}
+/*----------------------Картинка Маяковский. Обо мне--------------------------------------*/
+.img_Mayk{
+  float:left; 
+  width:300px; 
+  height:320px; 
+	border: 5px solid #ffe9ed;
+}
+/*----------------------Таблица история. История просмотров--------------------------------------*/
+.tableHistory {
+  position: center;
+  display: block;
+  float:left;
+	width: 100%;
+	margin-bottom: 20px;
+	border: 1px solid #dddddd;
+	border-collapse: collapse; 
+}
+.tableHistory th {
+	font-weight: bold;
+	padding: 5px;
+	background: #edd0d0;
+	border: 1px solid #dddddd;
+}
+.tableHistory td {
+	border: 1px solid #dddddd;
+	padding: 5px;
+}
+
+
+i {
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 1px;
+  }
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+  /* Navbar container */
+  .navbar {
+    overflow: hidden;
+    font-family: Bradley Hand, cursive;
+    font-size: 16px;
+    color: #fff;
+    padding: 8px 16px;
+  }
+  /* Links inside the navbar */
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    font-family: Bradley Hand, cursive;
+  }
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  /* Dropdown button */
+  .dropdown .dropbtn {
+    font-family: Bradley Hand, cursive;
+      font-size: 16px;
+          border: 0;
+          border-radius: 5px;
+          background: rgb(209, 130, 154);
+          color: #fff;
+          padding: 8px 16px;
+  
+  }
+  /* Add a red background color to navbar links on hover */
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background:#8a2e45;
+    font-family: Bradley Hand, cursive;
+    font-size: 16px;
+  }
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    float: none;
+    color: rgb(204, 134, 155);
+    background: rgb(255, 239, 244);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  /* Add a grey background color to dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: inline-block	;
+  }
+
+a {
+	color: #de008d;
+	text-decoration: none;
+   }
+
+   .block_div{
+	float: left;
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 10px;
+  }
+  .thumb img  {
+	float: left;
+    border: 2px b #b41530; /* Рамка вокруг фотографии */
+    padding: 15px; /* Расстояние от картинки до рамки */
+    background: rgb(180, 78, 78); /* Цвет фона */
+    margin-right: 10px; /* Отступ справа */
+    margin-bottom: 10px; /* Отступ снизу */
+   }
+.colortext{
+font-family: Bradley Hand, cursive;
+background-color: #ffe9ed;
+color: #de008d;
+border: 1px double #ffe9ed;
+}
+
+input::placeholder{
+	color: #de008d; 
+}
+.c-button:hover {
+    background: #8a3248;
+    font-family: Bradley Hand, cursive;
+	font-size: 13pt;
+  }
+  
+.c-button:focus {
+    font-family: Bradley Hand, cursive;
+	font-size: 13pt;
+    outline: none;
+    box-shadow: 0 0 0 4px #f7e0e4;
+}
+.c-button {
+    font-family: Bradley Hand, cursive;
+	font-size: 13pt;
+        appearance: none;
+        border: 0;
+        border-radius: 5px;
+        background: rgb(209, 130, 154);
+        color: #fff;
+        padding: 8px 16px;
+        font-size: 16px;
+
+}
+
+.form{
+	left:100px;
+	height: 40px;
+	width: 900px;
+	display: inline-flex;
+	margin-left: 400px;
+    margin-right: 100px;
+	font-size: 14pt;
+}
+
+
+.footer {
+  display: block;
+  margin-top: -40px;
+	bottom:0;
+	left:0;
+	width:100%;
+	height: 40px;
+	background-color: #f78da4;
+	color: #c70b35;
+	font-size: 13pt;
+}
+
+.OffMenu {
+clear:both;background-color: #f78da4;
+color: #a10628;float: left;
+top: 0;bottom: 0;width: 100%;
+height: 40px;
+font-size: 14pt;
+font-family: Bradley Hand, cursive;
+}
+
+.date_menu {
+  float:right;
+margin-top:12px;
+text-align:right;
+}
+
+.errorMes {
+  color: rgb(119, 9, 9);
+  font-size: 15px;
+  line-height: 16px;
+  text-align: left;
+  margin-left: 104px;
+}
+
+img{
+  border-radius: 2%;
+  border: 1px solid #FFF
+}
+
+.gallery img {
+  height: auto; width: 200px; margin: 10px;
+  box-shadow: 0 0 0 5px #fff, 0 0 0 6px #919191;
+  transition: .5s linear; cursor: pointer;
+}
+.show img { opacity: .25; pointer-events: none; }
+.active {
+  transition: box-shadow .5s linear .5s, top 1s ease-out, left 1s ease-out, transform 1s ease-out, width 1s ease-in, height 1s ease-in;
+  box-shadow: 0 0 0 10px #fff; filter: drop-shadow(1px 2px 6px #000);
+  pointer-events: none;
+}
+.close {
+  position: relative; left: 100%;
+  height: 20px; width: 20px;
+  transform: translate(0%, -100%);
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #fff, 0 0 2px 2px #000;
+  font: bold 20px/20px Arial; text-align: center;
+  background-color: #000; color: #fff;
+  pointer-events: auto; cursor: pointer;
+  transition: 1s linear; opacity: 0;
+}
+.active .close:hover { transform: translate(0%, -100%) rotate(.5turn); transition: 1s ease; }
+h3 {
+  display: block;
+  font-size: 1.10em;
+  margin-block-start: 1px;
+  margin-block-end: 1px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}

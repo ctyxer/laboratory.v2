@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 class ContactController extends Controller
 {
-    public function Contact()
+    public function contact()
     {
-        return view('Contact');
+        return view('contact');
     }
 }

@@ -1,13 +1,17 @@
 <?php
 
+use App\Http\Controllers\GuestBookController;
+use App\Http\Controllers\BlogCSVDownloadController;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\WelcomeController;
-use App\Http\Controllers\about_meController;
+use App\Http\Controllers\AboutMeController;
 use App\Http\Controllers\ContactController;
-use App\Http\Controllers\hobbyController;
-use App\Http\Controllers\studyController;
-use App\Http\Controllers\historyController;
-use App\Http\Controllers\testController;
-use App\Http\Controllers\albumController;
+use App\Http\Controllers\HobbyController;
+use App\Http\Controllers\StudyController;
+use App\Http\Controllers\HistoryController;
+use App\Http\Controllers\TestController;
+use App\Http\Controllers\AlbumController;
+use App\Http\Controllers\GuestBookDownloadController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,23 +33,71 @@ Route::get('/', function () {
 Route::get('/welcome', [WelcomeController::class, 'welcome'])
     ->name('welcome');
 
-Route::get('/about_me', [about_meController::class, 'about_me'])
+Route::get('/about_me', [AboutMeController::class, 'aboutMe'])
     ->name('about_me');
 
-Route::get('/Contact', [ContactController::class, 'Contact'])
+Route::get('/contact', [ContactController::class, 'contact'])
     ->name('contact');
 
-Route::get('/hobby', [hobbyController::class, 'hobby'])
+Route::get('/hobby', [HobbyController::class, 'hobby'])
     ->name('hobby');
 
-Route::get('/study', [studyController::class, 'study'])
+Route::get('/study', [StudyController::class, 'study'])
     ->name('study');
 
-Route::get('/history', [historyController::class, 'history'])
+Route::get('/history', [HistoryController::class, 'history'])
     ->name('history');
 
-Route::get('/test', [testController::class, 'test'])
-    ->name('test');
+route::group([
+    'prefix' => '/test',
+    'as' => 'test.'
+], function () {
+    Route::get('/index', [TestController::class, 'index'])
+        ->name('index');
 
-Route::get('/album', [albumController::class, 'album'])
+    Route::post('/store', [TestController::class, 'store'])
+        ->name('store');
+});
+
+Route::get('/album', [AlbumController::class, 'album'])
     ->name('album');
+
+Route::group([
+    'prefix' => '/guest/book',
+    'as' => 'guest.book.'
+], function () {
+    Route::get('/index', [GuestBookController::class, 'index'])
+        ->name('index');
+
+    Route::post('/store', [GuestBookController::class, 'store'])
+        ->name('store');
+
+    Route::get('/download/index', [GuestBookDownloadController::class, 'index'])
+        ->name('download.index');
+});
+
+
+Route::group([
+    'prefix' => '/blog',
+    'as' => 'blog.'
+], function () {
+    Route::get('/index', [BlogController::class, 'index'])
+        ->name('index');
+
+    Route::post('/store', [BlogController::class, 'store'])
+        ->name('store');
+
+    Route::get('/create', [BlogController::class, 'create'])
+        ->name('create');
+
+    Route::group([
+        'prefix' => '/download',
+        'as' => 'download.'
+    ], function () {
+        Route::post('/store', [BlogCSVDownloadController::class, 'store'])
+            ->name('store');
+
+        Route::get('/create', [BlogCSVDownloadController::class, 'create'])
+            ->name('create');
+    });
+});
