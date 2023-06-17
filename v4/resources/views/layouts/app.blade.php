@@ -36,7 +36,7 @@
         <a href="{{ route('hobby') }}">Хобби</a> &emsp;
         <a href="{{ route('study') }}">Учеба</a> &emsp;
         <a href="{{ route('album') }}">Фотоальбом</a> &emsp;
-        <a href="{{ route('contact') }}">Контакт</a> &emsp;
+        <a href="{{ route('contact.index') }}">Контакт</a> &emsp;
         <a href="{{ route('test.index') }}">Тест</a> &emsp;
         <a href="{{ route('blog.index') }}">Мой блог</a> &emsp;
         <a href="{{ route('guest.book.index') }}">Гостевая книга</a> &emsp;

@@ -38,8 +38,16 @@ Route::group([
     Route::get('/about_me', [AboutMeController::class, 'aboutMe'])
         ->name('about_me');
 
-    Route::get('/contact', [ContactController::class, 'contact'])
-        ->name('contact');
+    Route::group([
+        'prefix' => '/contact',
+        'as' => 'contact.'
+    ], function () {
+        Route::get('/contact', [ContactController::class, 'contact'])
+            ->name('contact');
+
+        Route::post('/store', [ContactController::class, 'store'])
+            ->name('store');
+    });
 
     Route::get('/hobby', [HobbyController::class, 'hobby'])
         ->name('hobby');
