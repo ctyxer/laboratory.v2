@@ -43,7 +43,7 @@ Route::group([
         'as' => 'contact.'
     ], function () {
         Route::get('/contact', [ContactController::class, 'contact'])
-            ->name('contact');
+            ->name('index');
 
         Route::post('/store', [ContactController::class, 'store'])
             ->name('store');

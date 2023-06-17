@@ -42,8 +42,8 @@ Route::group([
         'prefix' => '/contact',
         'as' => 'contact.'
     ], function () {
-        Route::get('/contact', [ContactController::class, 'contact'])
-            ->name('contact');
+        Route::get('/index', [ContactController::class, 'contact'])
+            ->name('index');
 
         Route::post('/store', [ContactController::class, 'store'])
             ->name('store');

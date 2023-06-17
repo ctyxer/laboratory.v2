@@ -36,8 +36,16 @@ Route::get('/welcome', [WelcomeController::class, 'welcome'])
 Route::get('/about_me', [AboutMeController::class, 'aboutMe'])
     ->name('about_me');
 
-Route::get('/contact', [ContactController::class, 'contact'])
-    ->name('contact');
+Route::group([
+    'prefix' => '/contact',
+    'as' => 'contact.'
+], function () {
+    Route::get('/', [ContactController::class, 'contact'])
+        ->name('index');
+
+    Route::post('/store', [ContactController::class, 'store'])
+        ->name('store');
+});
 
 Route::get('/hobby', [HobbyController::class, 'hobby'])
     ->name('hobby');
