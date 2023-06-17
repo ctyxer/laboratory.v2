@@ -12,7 +12,22 @@
 <body>
     <div class="OffMenu">
         <h3 style="float:left"> Меню </h3>
-        <div style="float:right"id="current_date_time_block"></div>
+        <div style="float:right" id="current_date_time_block" class="ml-2"></div>
+        @guest
+            <a href="{{ route('auth.register.index') }}" class=' text-rose-700 border-rose-600 rounded p-1 float-right m-1 mt-0'>Зарегестрироваться</a>
+
+            <a href="{{ route('auth.login.index') }}" class=' text-rose-700 border-rose-600 rounded p-1 float-right m-1 mt-0'>Войти</a>
+        @endguest
+
+        @auth
+            <form action="{{ route('auth.logout') }}" class=' border-rose-600 rounded p-1 float-right m-1 mt-0'
+                method="POST">
+                @csrf
+                <input type="submit" value="Выйти">
+            </form>
+
+            <p class=' border-rose-600 rounded p-1 float-right m-1 mt-0'>{{ auth()->user()->full_name }}</p>
+        @endauth
     </div>
 
     <nav>
