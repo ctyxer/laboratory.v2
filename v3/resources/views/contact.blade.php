@@ -28,7 +28,7 @@
         <div class="form">
             <label for="mail">
                 E-mail:
-                <input type="email" id="email" name="mail" minlength="8" placeholder="Введите email"
+                <input type="email" id="email" name="email" minlength="8" placeholder="Введите email"
                     class="colortext">
                 <div id="error4" class="errorMes"></div>
             </label>
